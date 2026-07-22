@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="404 Page Not Found - Stackly Investment Advisory.">
+    <title>Page Lost in Transmissions (404) | Stackly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background-color: var(--bg-primary); min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative;">
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-circle-wrap">
+            <div class="preloader-circle"></div>
+            <i class="fa-solid fa-chart-line preloader-icon"></i>
+        </div>
+        <div class="preloader-logo">
+            <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 48px;">
+        </div>
+        <div class="preloader-percentage">0%</div>
+    </div>
+
+    <!-- 404 ERROR CARD CONTAINER -->
+    <div class="container" style="max-width: 520px; padding: 2rem 1rem;">
+        <div class="glass-card" style="padding: 3.5rem 2.5rem; text-align: center; border-color: rgba(245, 158, 11, 0.25); box-shadow: var(--shadow-glow-accent);">
+            
+            <!-- GIANT 404 NUMBER WITH TEXT EFFECT -->
+            <div style="position: relative; display: inline-block; margin-bottom: 1.5rem;">
+                <h1 style="font-size: 7rem; font-weight: 900; line-height: 1; margin: 0; color: #d97706; text-shadow: 4px 4px 0px rgba(16, 185, 129, 0.2); letter-spacing: -0.04em;">404</h1>
+            </div>
+
+            <!-- BADGE -->
+            <div>
+                <span class="section-tag gold-tag" style="margin-bottom: 1.25rem;"><i class="fa-solid fa-triangle-exclamation"></i> ERROR 404</span>
+            </div>
+
+            <!-- TITLE & SUBTITLE -->
+            <h2 style="font-size: 2.1rem; margin-bottom: 1rem; color: var(--text-light);">Page Lost in Transmissions</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; margin-bottom: 2.25rem;">We can't seem to find the page you're looking for. The link may be broken, or the page has been moved. Let's get you back on track.</p>
+
+            <!-- ACTION BUTTONS ROW -->
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="index.html" class="btn btn-gold" style="padding: 0.85rem 1.6rem;"><i class="fa-solid fa-house"></i> Back to Home</a>
+                <button onclick="window.history.back()" class="btn btn-secondary" style="padding: 0.85rem 1.6rem; cursor: pointer;"><i class="fa-solid fa-arrow-left"></i> Go Back</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

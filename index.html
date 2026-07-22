@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stackly Investment Advisory - Premier fiduciary wealth management, institutional asset allocation, tax optimization, and family office services.">
+    <title>Stackly | Luxury Fiduciary Private Wealth Advisory</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-circle-wrap">
+            <div class="preloader-circle"></div>
+            <i class="fa-solid fa-chart-line preloader-icon"></i>
+        </div>
+        <div class="preloader-logo">
+            <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 48px;">
+        </div>
+        <div class="preloader-percentage">0%</div>
+    </div>
+
+    <!-- SCROLL PROGRESS BAR & CUSTOM CURSOR -->
+    <div class="scroll-progress-container"><div class="scroll-progress-bar"></div></div>
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- HEADER & NAVBAR -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                <div class="logo-text">STACKLY</div>
+            </a>
+            
+            <nav class="navbar">
+                <div class="drawer-header">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                        <div class="logo-text">STACKLY</div>
+                    </a>
+                    <button class="drawer-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                
+                <div class="drawer-search">
+                    <div style="position: relative; width: 100%;">
+                        <input type="text" placeholder="Search wealth solutions...">
+                        <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none;"></i>
+                    </div>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="strategies.html">Strategies</a></li>
+                    <li><a href="portfolio.html">Track Record</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-mobile-cta">
+                    <a href="login.html" class="btn btn-secondary">Login</a>
+                    <a href="contact.html" class="btn btn-primary">Book Consultation</a>
+                </div>
+                
+                <div class="drawer-contact-info">
+                    <h5>Contact Info</h5>
+                    <p><i class="fa-solid fa-phone"></i> +1 (800) 555-STACKLY</p>
+                    <p><i class="fa-solid fa-envelope"></i> wealth@stackly.com</p>
+                    <p><i class="fa-solid fa-location-dot"></i> 100 Wall Street, Financial District, NY</p>
+                </div>
+            </nav>
+            
+            <div class="nav-controls">
+                <a href="login.html" class="btn btn-secondary btn-sm" style="margin-right: 0.5rem;"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                <a href="contact.html" class="btn btn-primary btn-sm">Book Consultation</a>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION (2-COLUMN EQUAL HEIGHT) -->
+    <section class="hero-section" id="hero">
+        <div class="container">
+            <div class="hero-grid-2col">
+                
+                <!-- LEFT CONTENT BOX -->
+                <div class="hero-left-box">
+                    <div>
+                        <span class="section-tag gold-tag"><i class="fa-solid fa-shield-halved"></i> Fiduciary Private Wealth</span>
+                        <h1 class="hero-title">Mastery of Capital, <span class="text-gradient">Preserving Legacies</span></h1>
+                        <p class="hero-description">We combine institutional asset allocation, proprietary market algorithms, and custom tax planning to transform portfolios into enduring financial wealth.</p>
+                        <div class="hero-actions">
+                            <a href="contact.html" class="btn btn-gold">Book Consultation <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="strategies.html" class="btn btn-secondary">Explore Strategies</a>
+                        </div>
+                    </div>
+
+                    <!-- BOTTOM STATS ROW -->
+                    <div class="hero-stats-row">
+                        <div class="hero-stat-item">
+                            <h4 class="counter-value" data-target="15">15+ Yrs</h4>
+                            <p>Fiduciary Excellence</p>
+                        </div>
+                        <div class="hero-stat-item">
+                            <h4 class="counter-value" data-target="1280">$1.28B+</h4>
+                            <p>Assets Under Advisory</p>
+                        </div>
+                        <div class="hero-stat-item">
+                            <h4 class="counter-value" data-target="98">98.4%</h4>
+                            <p>Client Retention</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT CARD FRAME (SAME HEIGHT) -->
+                <div class="hero-right-card">
+                    <div class="hero-right-card-header">
+                        <h4>Institutional Portfolio Visualizer</h4>
+                        <div class="hero-live-badge">
+                            <div class="hero-live-dot"></div> Live Analytics
+                        </div>
+                    </div>
+
+                    <div class="hero-visual-frame">
+                        <img src="images/hero.webp" alt="Stackly Portfolio Analytics" id="hero-display-img">
+                    </div>
+
+                    <div class="hero-right-card-footer">
+                        <div class="hero-right-card-footer-info">
+                            <h5>Selected Asset Model</h5>
+                            <h4 id="hero-strategy-label">Global Macro Equity Growth</h4>
+                        </div>
+                        <div class="hero-color-toggles">
+                            <div class="hero-color-toggle-dot" style="background-color: var(--primary);" title="Global Equities" onclick="document.getElementById('hero-display-img').src='images/hero.webp'; document.getElementById('hero-strategy-label').textContent='Global Macro Equity Growth';"></div>
+                            <div class="hero-color-toggle-dot" style="background-color: var(--accent);" title="Private Debt & Credit" onclick="document.getElementById('hero-display-img').src='images/portfolio.webp'; document.getElementById('hero-strategy-label').textContent='Sovereign Fixed Credit';"></div>
+                            <div class="hero-color-toggle-dot" style="background-color: #3b82f6;" title="Alternative Real Estate" onclick="document.getElementById('hero-display-img').src='images/market.webp'; document.getElementById('hero-strategy-label').textContent='Private Real Estate Syndicate';"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. ABOUT SECTION -->
+    <section id="about" style="background-color: var(--bg-secondary);">
+        <div class="container grid-2col">
+            <div class="reveal-element" style="position: relative; height: 100%;">
+                <div style="height: 100%; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-glass); position: relative;">
+                    <img src="images/about.webp" alt="Stackly Wealth Advisory" class="img-fixed-feature" style="height: 100%; width: 100%; object-fit: cover; display: block;">
+                </div>
+                <div class="float-element" style="position: absolute; bottom: -15px; right: -15px; width: 140px; height: 140px; background: var(--gradient-hybrid); border-radius: var(--radius-md); padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; text-align: center; color: #000; z-index: 2; box-shadow: var(--shadow-glow-accent);">
+                    <h3 style="font-size: 2.25rem; font-weight: 800; line-height: 1; margin: 0; color: #000;">15+</h3>
+                    <p style="font-size: 0.75rem; text-transform: uppercase; font-weight: 800; margin-top: 0.25rem; color: #000;">Years Fiduciary</p>
+                </div>
+            </div>
+            <div class="reveal-element">
+                <span class="section-tag gold-tag"><i class="fa-solid fa-award"></i> Our Firm Heritage</span>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">We build resilient portfolios, risk-hedged strategies, and enduring legacies.</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Founded in 2011, STACKLY operates under strict fiduciary standards. We eliminate conflict of interest by rejecting commission-based sales, focusing exclusively on objective asset allocation, private equity access, and tax-minimized wealth accumulation.</p>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+                    <li><i class="fa-solid fa-circle-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Quantitative risk management & downside market hedging</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Certified Financial Planners (CFP®) & Chartered Financial Analysts (CFA®)</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Real-time encrypted portal tracking daily yield & capital allocation</li>
+                </ul>
+                <a href="about.html" class="btn btn-secondary">Read Full Story</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION -->
+    <section id="services">
+        <div class="container" style="text-align: center; margin-bottom: 4rem;">
+            <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Institutional Capabilities</span>
+            <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Comprehensive Fiduciary Solutions</h2>
+            <p style="color: var(--text-muted);">Engineered for ultra-high-net-worth investors, family offices, and corporate executives.</p>
+        </div>
+        <div class="container grid-3col">
+            <div class="glass-card reveal-element">
+                <img src="images/portfolio.webp" alt="Portfolio Strategy" class="img-fixed-card" style="margin-bottom: 1.25rem;">
+                <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-light);">Global Equity Allocation</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">Direct access to global equity markets, factor-tilted momentum portfolios, and automated tax-loss harvesting engines.</p>
+                <a href="services.html" class="btn btn-secondary btn-sm" style="width: 100%;">Explore Strategy</a>
+            </div>
+            
+            <div class="glass-card reveal-element" style="transition-delay: 150ms;">
+                <img src="images/market.webp" alt="Sovereign Income" class="img-fixed-card" style="margin-bottom: 1.25rem;">
+                <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-light);">Sovereign Fixed Credit</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">High-grade municipal bonds, treasury inflation-protected notes, and private credit pools generating quarterly income.</p>
+                <a href="services.html" class="btn btn-secondary btn-sm" style="width: 100%;">Explore Strategy</a>
+            </div>
+            
+            <div class="glass-card reveal-element" style="transition-delay: 300ms;">
+                <img src="images/success.webp" alt="Estate Preservation" class="img-fixed-card" style="margin-bottom: 1.25rem;">
+                <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-light);">Estate & Succession</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">Multi-generational trust structuring, family office governance, and tax-exempt asset transfer planning.</p>
+                <a href="services.html" class="btn btn-secondary btn-sm" style="width: 100%;">Explore Strategy</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ANIMATED STATS COUNTERS -->
+    <section class="stats-counter-section" style="padding: 5rem 0;">
+        <div class="container grid-4col" style="text-align: center;">
+            <div class="counter-item">
+                <h3 class="counter-value" data-target="15000">0</h3>
+                <p>Private Clients</p>
+            </div>
+            <div class="counter-item">
+                <h3 class="counter-value" data-target="50">0</h3>
+                <p>Chartered Advisors</p>
+            </div>
+            <div class="counter-item">
+                <h3 class="counter-value" data-target="15">0</h3>
+                <p>Years Track Record</p>
+            </div>
+            <div class="counter-item">
+                <h3 class="counter-value" data-target="1280">0</h3>
+                <p>Milestones Achieved ($M)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CONSULTATION TIMETABLE SCHEDULE -->
+    <section id="schedule">
+        <div class="container" style="text-align: center; margin-bottom: 4rem;">
+            <span class="section-tag"><i class="fa-solid fa-calendar-check"></i> Advisor Timetable</span>
+            <h2 style="font-size: 2.5rem;">Weekly Advisory Availability</h2>
+        </div>
+        <div class="container" style="max-width: 900px;">
+            <div class="schedule-tabs">
+                <button class="btn btn-secondary btn-sm" onclick="window.showCustomAlert('Monday Consultations: Portfolio Audit @ 9 AM, Tax Strategy @ 2 PM', 'success')">Mon</button>
+                <button class="btn btn-secondary btn-sm" onclick="window.showCustomAlert('Tuesday Consultations: Equity Allocation @ 10 AM, Estate Planning @ 4 PM', 'success')">Tue</button>
+                <button class="btn btn-secondary btn-sm" onclick="window.showCustomAlert('Wednesday Consultations: Fixed Income @ 11 AM, Risk Audit @ 3 PM', 'success')">Wed</button>
+                <button class="btn btn-secondary btn-sm" onclick="window.showCustomAlert('Thursday Consultations: Private Equity Briefing @ 9 AM, Offshore Trust @ 5 PM', 'success')">Thu</button>
+                <button class="btn btn-secondary btn-sm" onclick="window.showCustomAlert('Friday Consultations: Macro Review @ 10 AM, Executive Q&A @ 4 PM', 'success')">Fri</button>
+            </div>
+            <div class="glass-card">
+                <div style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid var(--border-glass);">
+                    <span>09:00 AM - 10:30 AM</span>
+                    <span style="font-weight: 700; color: var(--primary);">Macro Equity Portfolio Review</span>
+                    <span>Marcus Vance, CFA</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid var(--border-glass);">
+                    <span>02:00 PM - 03:30 PM</span>
+                    <span style="font-weight: 700; color: var(--primary);">Tax Optimization & Structuring</span>
+                    <span>Sarah Jenkins, CFP</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 1rem 0;">
+                    <span>05:00 PM - 06:30 PM</span>
+                    <span style="font-weight: 700; color: var(--primary);">Private Market Syndicate Briefing</span>
+                    <span>David Ross, MBA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. COMPOUND INTEREST / ROI CALCULATOR -->
+    <section style="background-color: var(--bg-secondary);">
+        <div class="container grid-2col">
+            <div class="calc-box reveal-element">
+                <span class="section-tag gold-tag"><i class="fa-solid fa-calculator"></i> Wealth Projection Engine</span>
+                <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-light);">Estimate Portfolio Growth</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Calculate long-term compound wealth growth based on initial capital, recurring monthly contributions, and estimated annual return.</p>
+                <form onsubmit="event.preventDefault(); window.calculateWealthGrowth();">
+                    <div class="form-group">
+                        <label for="calc-principal">Initial Portfolio Capital ($)</label>
+                        <input type="number" id="calc-principal" value="250000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="calc-monthly">Monthly Contribution ($)</label>
+                        <input type="number" id="calc-monthly" value="2500" required>
+                    </div>
+                    <div class="grid-2col" style="gap: 1rem; margin-bottom: 0;">
+                        <div class="form-group">
+                            <label for="calc-rate">Annual Return (%)</label>
+                            <input type="number" id="calc-rate" value="9.5" step="0.1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="calc-years">Investment Horizon (Yrs)</label>
+                            <input type="number" id="calc-years" value="15" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 1rem;">Run Projection Model</button>
+                </form>
+            </div>
+            
+            <div class="reveal-element">
+                <div class="glass-card" style="margin-bottom: 1.5rem;">
+                    <h4 style="font-size: 1.2rem; color: var(--primary); margin-bottom: 0.5rem;"><i class="fa-solid fa-chart-line"></i> Institutional Yield Curve</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Our quantitative models harvest tax-losses daily to maximize net annual compound returns.</p>
+                </div>
+                <img src="images/portfolio.webp" alt="Growth Projection Chart" class="img-fixed-feature">
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CALL TO ACTION SECTION -->
+    <section style="padding: 6rem 0; background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 70%), var(--bg-primary);">
+        <div class="container" style="max-width: 960px;">
+            <div class="glass-card reveal-element" style="padding: 4rem 3rem; text-align: center; border-color: rgba(16, 185, 129, 0.25); box-shadow: var(--shadow-glow-primary); border-radius: var(--radius-lg); position: relative; overflow: hidden;">
+                <!-- Ambient glow decoration -->
+                <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(245, 158, 11, 0.15); filter: blur(40px); border-radius: 50%;"></div>
+                
+                <span class="section-tag gold-tag" style="margin-bottom: 1.5rem;"><i class="fa-solid fa-gem"></i> Institutional Fiduciary Wealth</span>
+                <h2 style="font-size: clamp(2rem, 3.5vw, 2.75rem); line-height: 1.25; margin-bottom: 1rem; font-weight: 800; color: var(--text-light);">Ready to Secure & <span class="text-gradient">Optimize Your Legacy?</span></h2>
+                <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; max-width: 680px; margin: 0 auto 2.5rem auto;">Request a confidential portfolio audit and custom tax efficiency roadmap with a managing fiduciary advisor today.</p>
+                
+                <div style="display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn btn-gold" style="padding: 0.95rem 2rem;"><i class="fa-solid fa-calendar-days" style="margin-right: 0.5rem;"></i> Book Private Consultation</a>
+                    <a href="strategies.html" class="btn btn-secondary" style="padding: 0.95rem 2rem;"><i class="fa-solid fa-compass" style="margin-right: 0.5rem;"></i> Explore Strategies</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col-about">
+                <a href="index.html" class="logo" style="margin-bottom: 1.25rem;">
+                    <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                    <div class="logo-text">STACKLY</div>
+                </a>
+                <p>Stackly Investment Advisory is a premier fiduciary wealth management firm dedicated to capital growth, downside risk mitigation, and multi-generational family estate preservation.</p>
+                <div class="footer-social-row">
+                    <a href="404.html" class="social-fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404.html" class="social-x" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="404.html" class="social-in" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="404.html" class="social-ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="strategies.html">Strategies</a></li>
+                    <li><a href="portfolio.html">Track Record</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html">Global Equity Allocation</a></li>
+                    <li><a href="services.html">Sovereign Fixed Income</a></li>
+                    <li><a href="services.html">Tax Loss Harvesting</a></li>
+                    <li><a href="services.html">Estate & Succession</a></li>
+                    <li><a href="services.html">Private Equity Syndicates</a></li>
+                    <li><a href="services.html">Executive Retirement</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4>Newsletter</h4>
+                <p style="margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-muted);">Subscribe to receive institutional wealth forecasts, macro market dispatches, and private equity trend reports from our team.</p>
+                <form class="footer-newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Stackly. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
