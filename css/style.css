@@ -1483,7 +1483,7 @@ body.light .sidebar-link:hover, body.light .sidebar-link.active {
 }
 
 .panel-box {
-    background: #1F2937;
+    background: var(--bg-secondary);
     border: 1px solid var(--border-glass);
     border-radius: var(--radius-sm);
     padding: 2rem;
@@ -1716,7 +1716,7 @@ body.light .sidebar-link:hover, body.light .sidebar-link.active {
 
 /* Stats Cards */
 .stat-card {
-    background: #1F2937;
+    background: var(--bg-secondary);
     border: 1px solid var(--border-glass);
     border-radius: var(--radius-sm);
     padding: 1.75rem 1.5rem;
@@ -1729,7 +1729,7 @@ body.light .sidebar-link:hover, body.light .sidebar-link.active {
 .stat-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    border-color: rgba(225, 29, 72, 0.2);
+    border-color: rgba(16, 185, 129, 0.25);
 }
 
 .stat-label {
