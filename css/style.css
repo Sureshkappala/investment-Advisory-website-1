@@ -2193,3 +2193,24 @@ body.light .sidebar-link:hover, body.light .sidebar-link.active {
         gap: 1.5rem !important;
     }
 }
+
+/* Sidebar Sign Out button positioning - Pins it to the bottom of the sidebar */
+.signout-btn {
+    margin-top: auto !important;
+    display: flex !important;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.8rem 1.2rem;
+    color: var(--text-muted) !important;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.signout-btn:hover {
+    color: #ef4444 !important;
+    background: rgba(239, 68, 68, 0.08) !important;
+    border-color: rgba(239, 68, 68, 0.15) !important;
+}
