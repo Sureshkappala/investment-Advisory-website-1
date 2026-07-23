@@ -790,7 +790,7 @@ img {
     min-height: 480px;
     box-shadow: var(--shadow-md);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .hero-right-card-header {
@@ -2110,4 +2110,10 @@ body.light .sidebar-link:hover, body.light .sidebar-link.active {
 .reveal-right.revealed {
     opacity: 1;
     transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+    .floating-hero-badge {
+        display: none !important;
+    }
 }
