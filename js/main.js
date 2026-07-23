@@ -530,25 +530,25 @@ function initDashboardRoles() {
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="text-light-value">Hamilton Trust</td>
-                            <td>STK-HAM-901</td>
-                            <td>$2,450,000</td>
-                            <td>98/100</td>
-                            <td><span class="badge-status status-active">Active</span></td>
+                            <td class="text-light-value" data-label="Account">Hamilton Trust</td>
+                            <td data-label="Reference ID">STK-HAM-901</td>
+                            <td data-label="AUM">$2,450,000</td>
+                            <td data-label="Score">98/100</td>
+                            <td data-label="Status"><span class="badge-status status-active">Active</span></td>
                         </tr>
                         <tr>
-                            <td class="text-light-value">Aurelia Growth Fund LLC</td>
-                            <td>STK-AUR-202</td>
-                            <td>$15,400,000</td>
-                            <td>95/100</td>
-                            <td><span class="badge-status status-active">Active</span></td>
+                            <td class="text-light-value" data-label="Account">Aurelia Growth Fund LLC</td>
+                            <td data-label="Reference ID">STK-AUR-202</td>
+                            <td data-label="AUM">$15,400,000</td>
+                            <td data-label="Score">95/100</td>
+                            <td data-label="Status"><span class="badge-status status-active">Active</span></td>
                         </tr>
                         <tr>
-                            <td class="text-light-value">Vance Family Trust</td>
-                            <td>STK-VAN-789</td>
-                            <td>$8,720,000</td>
-                            <td>99/100</td>
-                            <td><span class="badge-status status-active">Active</span></td>
+                            <td class="text-light-value" data-label="Account">Vance Family Trust</td>
+                            <td data-label="Reference ID">STK-VAN-789</td>
+                            <td data-label="AUM">$8,720,000</td>
+                            <td data-label="Score">99/100</td>
+                            <td data-label="Status"><span class="badge-status status-active">Active</span></td>
                         </tr>
                     </tbody>
                 `;
