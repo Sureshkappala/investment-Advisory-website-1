@@ -1610,7 +1610,18 @@ body.light .sidebar-link:hover, body.light .sidebar-link.active {
 
     .db-main {
         margin-left: 0 !important;
-        padding: 1.5rem !important;
+        padding: 1.25rem 1rem !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        min-width: 0 !important;
+        overflow-x: hidden !important;
+    }
+    
+    .panel-box {
+        padding: 1.25rem 1rem !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-x: auto !important;
     }
     
     .db-stats-row {
@@ -1724,6 +1735,7 @@ body.light .sidebar-link:hover, body.light .sidebar-link.active {
 /* Dashboard Table styling */
 .db-table {
     width: 100%;
+    min-width: 580px;
     border-collapse: collapse;
     margin-top: 1rem;
     text-align: left;
