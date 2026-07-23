@@ -5,10 +5,10 @@
 
 :root {
     /* Color Palette - Deep Luxury Emerald & Gold Dark Mode */
-    --bg-primary: #070e17;
-    --bg-secondary: #0d1726;
-    --bg-tertiary: #132238;
-    --bg-glass: rgba(13, 23, 38, 0.75);
+    --bg-primary: #05201A;       /* Deep Forest Green Base */
+    --bg-secondary: #0D332B;     /* Moss Green Card Background */
+    --bg-tertiary: #164E42;      /* Accent Green */
+    --bg-glass: rgba(13, 51, 43, 0.75);
     
     --primary: #10b981; /* Emerald Green */
     --primary-dark: #059669;
@@ -24,6 +24,7 @@
     --gradient-primary: linear-gradient(135deg, #10b981 0%, #059669 100%);
     --gradient-gold: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
     --gradient-hybrid: linear-gradient(135deg, #10b981 0%, #f59e0b 100%);
+    --gradient-dark: linear-gradient(180deg, #05201A 0%, #0D332B 100%);
     
     --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
@@ -2009,4 +2010,94 @@ body.light .sidebar-link:hover, body.light .sidebar-link.active {
         grid-template-columns: 1fr !important;
         gap: 0 !important;
     }
+}
+
+/* ==========================================================================
+   PREMIUM CUSTOM ANIMATIONS
+   ========================================================================== */
+
+/* Keyframe definition for Floating elements */
+@keyframes floatY {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes scaleUpPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideInFromLeft {
+    0% { opacity: 0; transform: translateX(-40px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInFromRight {
+    0% { opacity: 0; transform: translateX(40px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes shimmerSweep {
+    0% { left: -100%; }
+    100% { left: 125%; }
+}
+
+/* Hover Sweep shimmer effect for pricing cards and feature cards */
+.shimmer-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-25deg);
+}
+
+.shimmer-card:hover::after {
+    animation: shimmerSweep 0.85s ease-out forwards;
+}
+
+/* Float Animation helper classes */
+.anim-float {
+    animation: floatY 4s ease-in-out infinite;
+}
+
+.anim-pulse {
+    animation: scaleUpPulse 3s ease-in-out infinite;
+}
+
+/* Micro-interaction updates on existing elements */
+.btn-primary:hover, .btn-gold:hover, .btn-secondary:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+}
+
+/* Slide Reveal Animation modifications for scroll events */
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-left.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-right.revealed {
+    opacity: 1;
+    transform: translateX(0);
 }
