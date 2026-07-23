@@ -1452,14 +1452,14 @@ img {
 }
 
 .sidebar-link:hover, .sidebar-link.active {
-    color: var(--primary);
-    background: rgba(225, 29, 72, 0.1);
-    border-color: rgba(225, 29, 72, 0.15);
+    color: var(--primary-light);
+    background: rgba(16, 185, 129, 0.08);
+    border-color: rgba(16, 185, 129, 0.15);
 }
 
 body.light .sidebar-link:hover, body.light .sidebar-link.active {
-    color: var(--primary);
-    background: rgba(225, 29, 72, 0.05);
+    color: var(--primary-light);
+    background: rgba(16, 185, 129, 0.04);
 }
 
 .db-main {
@@ -1632,7 +1632,7 @@ body.light .sidebar-link:hover, body.light .sidebar-link.active {
    GYM ATHLETE DASHBOARD STYLES (CARDS, WIDGETS, TABLES, AND HERO)
    ========================================================================== */
 .db-welcome-hero {
-    background: linear-gradient(135deg, rgba(225, 29, 72, 0.15) 0%, #1F2937 100%);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, var(--bg-secondary) 100%);
     border: 1px solid var(--border-glass);
     border-radius: var(--radius-md);
     padding: 2.5rem;
@@ -2115,5 +2115,20 @@ body.light .sidebar-link:hover, body.light .sidebar-link.active {
 @media (max-width: 768px) {
     .floating-hero-badge {
         display: none !important;
+    }
+}
+
+/* Dashboard Grid Layout (2-Column Desktop, 1-Column Collapse) */
+.db-grid {
+    display: grid;
+    grid-template-columns: 2.1fr 0.9fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+@media (max-width: 1024px) {
+    .db-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
     }
 }
