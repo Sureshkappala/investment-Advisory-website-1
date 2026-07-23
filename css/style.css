@@ -1637,6 +1637,55 @@ body.light .sidebar-link:hover, body.light .sidebar-link.active {
     .db-welcome-hero h1 {
         font-size: 1.5rem !important;
     }
+
+    /* Responsive Table Styles (Block Layout Cards) */
+    .db-table, 
+    .db-table thead, 
+    .db-table tbody, 
+    .db-table th, 
+    .db-table td, 
+    .db-table tr {
+        display: block !important;
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+    
+    .db-table thead {
+        display: none !important;
+    }
+    
+    .db-table tr {
+        margin-bottom: 1.25rem !important;
+        border: 1px solid var(--border-glass) !important;
+        border-radius: var(--radius-sm) !important;
+        padding: 0.85rem !important;
+        background: rgba(255, 255, 255, 0.01) !important;
+    }
+    
+    .db-table td {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 0.6rem 0 !important;
+        font-size: 0.88rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.03) !important;
+        text-align: right !important;
+    }
+    
+    .db-table td:last-child {
+        border-bottom: none !important;
+    }
+    
+    .db-table td::before {
+        content: attr(data-label) !important;
+        font-weight: 700 !important;
+        color: var(--text-muted) !important;
+        text-transform: uppercase !important;
+        font-size: 0.72rem !important;
+        letter-spacing: 0.5px !important;
+        margin-right: 1.5rem !important;
+        text-align: left !important;
+    }
 }
 
 /* ==========================================================================
