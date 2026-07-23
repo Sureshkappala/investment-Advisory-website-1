@@ -307,10 +307,41 @@ function initFormValidations() {
         });
     });
 
+    const contactName = document.getElementById('contact-name');
+    if (contactName) {
+        contactName.addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, '');
+        });
+    }
+
+    const contactPhone = document.getElementById('contact-phone');
+    if (contactPhone) {
+        contactPhone.addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/\D/g, '');
+        });
+    }
+
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
+            const nameVal = document.getElementById('contact-name').value;
+            const phoneVal = document.getElementById('contact-phone').value;
+
+            // Name check (letters & spaces only)
+            const nameRegex = /^[a-zA-Z\s]+$/;
+            if (!nameRegex.test(nameVal)) {
+                window.showCustomAlert("Full Name must contain only letters.", "error");
+                return;
+            }
+
+            // Phone check (digits only)
+            const phoneRegex = /^[0-9]+$/;
+            if (!phoneRegex.test(phoneVal)) {
+                window.showCustomAlert("Phone Number must contain only digits.", "error");
+                return;
+            }
+
             window.showCustomAlert("Thank you! Your private consultation request has been dispatched to our senior wealth director.", "success");
             contactForm.reset();
         });

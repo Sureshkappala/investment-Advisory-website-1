@@ -22,19 +22,22 @@
         <div class="preloader-percentage">0%</div>
     </div>
 
+    <!-- BACK TO HOME BUTTON -->
+    <a href="index.html" class="back-to-home-btn"><i class="fa-solid fa-house"></i> Back to Home</a>
+
     <!-- REGISTER CONTAINER -->
     <div class="container" style="max-width: 520px; padding: 0; width: 100%;">
-        <div class="glass-card" style="padding: 2.75rem 2.25rem; text-align: center;">
+        <div class="glass-card" style="padding: 2.75rem 2.25rem; text-align: center; border-right: 4px solid #b58a63;">
             
             <!-- LOGO & HEADING -->
             <div style="text-align: center; margin-bottom: 2rem;">
                 <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 38px; margin: 0 auto 1.25rem auto;">
-                <h2 style="font-size: 2rem; margin-bottom: 0.4rem; color: var(--text-light);">Create Account</h2>
-                <p style="font-size: 0.88rem; color: var(--text-muted);">Register your client portal or fiduciary partner profile.</p>
+                <h2 style="font-size: 2rem; margin-bottom: 0.4rem; color: var(--text-light); font-family: serif;">Create Account</h2>
+                <p style="font-size: 0.88rem; color: var(--text-muted);">Register your client portal or agency partner profile.</p>
             </div>
 
             <!-- FORM -->
-            <form id="register-form">
+            <form id="register-form" style="text-align: left;">
                 
                 <!-- FULL NAME -->
                 <div class="form-group">
@@ -108,13 +111,13 @@
                 </div>
 
                 <!-- SUBMIT BUTTON -->
-                <button type="submit" class="btn btn-gold" style="width: 100%; padding: 0.9rem; font-size: 1rem; border-radius: var(--radius-sm); text-transform: uppercase;">REGISTER ACCOUNT</button>
+                <button type="submit" class="btn btn-gold" style="width: 100%; padding: 0.9rem; font-size: 1.05rem; border-radius: var(--radius-sm); background: #b58a63 !important; color: #000 !important; border: none; font-weight: 700; text-shadow: none;">Register Account</button>
 
             </form>
 
             <!-- BOTTOM LOGIN LINK -->
             <div style="text-align: center; margin-top: 1.75rem; font-size: 0.85rem; color: var(--text-muted);">
-                Already have an account? <a href="login.html" style="color: var(--accent); font-weight: 700;">Login Here</a>
+                Already have an account? <a href="login.html" style="color: #10b981; font-weight: 700;">Login Here</a>
             </div>
 
         </div>
@@ -122,6 +125,15 @@
 
     <script src="js/main.js"></script>
     <script>
+        // Real-time input filtering to block digits in name and non-digits in phone
+        document.getElementById('reg-name').addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, '');
+        });
+
+        document.getElementById('reg-phone').addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/\D/g, '');
+        });
+
         function togglePwd(fieldId, eyeId) {
             const field = document.getElementById(fieldId);
             const icon = document.getElementById(eyeId);
@@ -139,9 +151,31 @@
         document.getElementById('register-form').addEventListener('submit', (e) => {
             e.preventDefault();
             const name = document.getElementById('reg-name').value;
+            const phone = document.getElementById('reg-phone').value;
             const pwd = document.getElementById('reg-pwd').value;
             const confirm = document.getElementById('reg-pwd-confirm').value;
             const role = document.getElementById('reg-role').value || 'client';
+
+            // Name check (letters & spaces only)
+            const nameRegex = /^[a-zA-Z\s]+$/;
+            if (!nameRegex.test(name)) {
+                window.showCustomAlert('Full Name must contain only letters.', 'error');
+                return;
+            }
+
+            // Phone check (digits only)
+            const phoneRegex = /^[0-9]+$/;
+            if (!phoneRegex.test(phone)) {
+                window.showCustomAlert('Phone Number must contain only digits.', 'error');
+                return;
+            }
+
+            // Password complexity check
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
+            if (!passwordRegex.test(pwd)) {
+                window.showCustomAlert('Password must be at least 8 characters long and contain a combination of uppercase, lowercase, digits, and symbols.', 'error');
+                return;
+            }
 
             if (pwd !== confirm) {
                 window.showCustomAlert('Passwords do not match. Please re-enter passwords.', 'error');

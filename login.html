@@ -22,21 +22,22 @@
         <div class="preloader-percentage">0%</div>
     </div>
 
+    <!-- BACK TO HOME BUTTON -->
+    <a href="index.html" class="back-to-home-btn"><i class="fa-solid fa-house"></i> Back to Home</a>
+
     <!-- LOGIN CONTAINER -->
     <div class="container" style="max-width: 440px; padding: 0; width: 100%;">
-        <div class="glass-card" style="padding: 2.75rem 2.25rem; text-align: center;">
-            <!-- BACK TO HOME BUTTON -->
-            <a href="index.html" class="back-to-home-btn" style="margin: 0 auto 1.5rem auto; display: inline-flex;"><i class="fa-solid fa-house"></i> BACK TO HOME</a>
+        <div class="glass-card" style="padding: 2.75rem 2.25rem; text-align: center; border-right: 4px solid #b58a63;">
             
             <!-- LOGO & HEADING -->
             <div style="text-align: center; margin-bottom: 2rem;">
                 <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 38px; margin: 0 auto 1.25rem auto;">
-                <h2 style="font-size: 2rem; margin-bottom: 0.4rem; color: var(--text-light);">Welcome Back</h2>
-                <p style="font-size: 0.88rem; color: var(--text-muted);">Access your client portal or investment dashboard.</p>
+                <h2 style="font-size: 2rem; margin-bottom: 0.4rem; color: var(--text-light); font-family: serif;">Welcome Back</h2>
+                <p style="font-size: 0.88rem; color: var(--text-muted);">Access your client portal or design dashboard.</p>
             </div>
 
             <!-- FORM -->
-            <form id="login-form">
+            <form id="login-form" style="text-align: left;">
                 
                 <!-- EMAIL FIELD WITH ICON -->
                 <div class="form-group">
@@ -81,13 +82,13 @@
                 </div>
 
                 <!-- SUBMIT BUTTON -->
-                <button type="submit" class="btn btn-gold" style="width: 100%; padding: 0.9rem; font-size: 1rem; border-radius: var(--radius-sm); text-transform: uppercase;">ACCESS PORTAL</button>
+                <button type="submit" class="btn btn-gold" style="width: 100%; padding: 0.9rem; font-size: 1.05rem; border-radius: var(--radius-sm); background: #b58a63 !important; color: #000 !important; border: none; font-weight: 700; text-shadow: none;">Access Portal</button>
 
             </form>
 
             <!-- BOTTOM REGISTER LINK -->
             <div style="text-align: center; margin-top: 1.75rem; font-size: 0.85rem; color: var(--text-muted);">
-                Don't have a wealth account? <a href="register.html" style="color: var(--accent); font-weight: 700;">Register Here</a>
+                Don't have a design account? <a href="register.html" style="color: #10b981; font-weight: 700;">Register Here</a>
             </div>
 
         </div>
@@ -112,7 +113,16 @@
         document.getElementById('login-form').addEventListener('submit', (e) => {
             e.preventDefault();
             const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
             const role = document.getElementById('login-role').value || 'client';
+
+            // Password complexity check
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
+            if (!passwordRegex.test(password)) {
+                window.showCustomAlert('Password must be at least 8 characters long and contain a combination of uppercase, lowercase, digits, and symbols.', 'error');
+                return;
+            }
+
             localStorage.setItem('loggedInUserName', email.split('@')[0].toUpperCase());
             localStorage.setItem('loggedInUserRole', role);
             window.showCustomAlert('Authentication Approved! Redirecting to Portfolio Dashboard...', 'success');
